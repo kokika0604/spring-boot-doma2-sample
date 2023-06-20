@@ -4,18 +4,11 @@ spring:
       on-profile: local
   messages:
     cache-duration: -1
-# it/sample-web-frontのテストが通らないためコメントアウト
-#  thymeleaf:
-#    prefix: file:src/main/resources/templates/
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/spring-boot-doma2-sample?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/spring-boot-doma2-sample?useSSL=false
     username: root
     password: passw0rd
-  web:
-    resources:
-      # キャッシュの無効化
-      static-locations: file:src/main/resources/public/
   flyway:
     enable: true
     baseline-on-migrate: true
@@ -40,8 +33,3 @@ logging:
 ####
 # アプリケーションの設定
 application:
-  fileUploadLocation: build/sample
-  cors:
-    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, X-XSRF-TOKEN"
-    allowedMethods: "POST, GET, PUT, OPTIONS, DELETE"
-    allowedOrigins: "*" # CORSを許可するドメイン名を指定する

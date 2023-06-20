@@ -32,16 +32,15 @@ dependencies {
     api "com.fasterxml.jackson.dataformat:jackson-dataformat-csv"
 
     // modelmapper
-    api "org.modelmapper:modelmapper:3.1.0"
+    api "org.modelmapper:modelmapper:3.1.1"
 
     // mysql database
     api "com.mysql:mysql-connector-j"
     api "org.flywaydb:flyway-core"
     api "org.flywaydb:flyway-mysql"
 
-//    testImplementation "org.springframework:spring-context"
-//    testImplementation "org.springframework:spring-test"
     testImplementation "org.flywaydb.flyway-test-extensions:flyway-spring-test:7.0.0"
-    testImplementation "org.testcontainers:spock:1.17.6"
-    testImplementation "org.testcontainers:mysql:1.17.6"
+    testImplementation "org.springframework.boot:spring-boot-testcontainers"
+    testImplementation "org.testcontainers:spock"
+    testImplementation "org.testcontainers:mysql"
 }
